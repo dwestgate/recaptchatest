@@ -1,5 +1,5 @@
 <!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>. t     -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
 <!--  If necessary, please modify the charset parameter to specify the        -->
 <!--  character set of your HTML page.                                        -->
 <!--  ----------------------------------------------------------------------  -->
@@ -16,10 +16,12 @@
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"reCaptchaV2_testing_dw","fallback":"true","orgId":"00Dj0000001rk3o","ts":""}'>
-<input type=hidden name="orgid" value="00Dj0000001rk3o">
-<input type=hidden name="retURL" value="http://">
-
+<input type="hidden" name='captcha_settings' value='{"keyname":"reCaptchaV2_testing_dw","fallback":"true","orgId":"00Dj0000001rk3o","ts":""}'>
+<input type="hidden" name="orgid" value="00Dj0000001rk3o">
+<input type="hidden" name="retURL" value="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8">
+<input type="hidden" name="debug" value=1>
+<input type="hidden" name="debugEmail" value="david@branch.io">  
+ 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
 <!--  these lines if you wish to test in debug mode.                          -->
@@ -27,17 +29,22 @@
 <!--  <input type="hidden" name="debugEmail" value="david@branch.io">         -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="name" id="name_pcl">Contact Name</label><input  aria-labelledby="name_pcl" id="name" maxlength="80" name="name" size="20" type="text" /><br>
+	<div class="bds-col-lg-2"><label for="name" id="name_pcl">Contact Name</label></div>
+	<div class="bds-col-lg-10"><input  aria-labelledby="name_pcl" id="name" maxlength="80" name="name" size="20" type="text" /></div>
 
-<label for="email" id="email_pcl">Email</label><input  aria-labelledby="email_pcl" id="email" maxlength="80" name="email" size="20" type="text" /><br>
+	<div class="bds-col-lg-2"><label for="email" id="email_pcl">Email</label></div>
+	<div class="bds-col-lg-10"><input  aria-labelledby="email_pcl" id="email" maxlength="80" name="email" size="20" type="text" /></div>
 
-<label for="phone" id="phone_pcl">Phone</label><input  aria-labelledby="phone_pcl" id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+	<div class="bds-col-lg-2"><label for="phone" id="phone_pcl">Phone</label></div>
+	<div class="bds-col-lg-10"><input  aria-labelledby="phone_pcl" id="phone" maxlength="40" name="phone" size="20" type="text" /></div>
 
-<label for="subject" id="subject_pcl">Subject</label><input  aria-labelledby="subject_pcl" id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+	<div class="bds-col-lg-2"><label for="subject" id="subject_pcl">Subject</label></div>
+	<div class="bds-col-lg-10"><input  aria-labelledby="subject_pcl" id="subject" maxlength="80" name="subject" size="20" type="text" /></div>
 
-<label for="description" id="description_pcl">Description</label><textarea name="description"></textarea><br>
+	<div class="bds-col-lg-2"><label for="description" id="description_pcl">Description</label></div>
+	<div class="bds-col-lg-10"><textarea name="description"></textarea><br></div>
 
-<div class="g-recaptcha" data-sitekey="6LcVnLQUAAAAAJKac-uOoll-YwHq6NFYtk8ldvmx"></div><br>
-<input type="submit" name="submit">
+	<div class="bds-col-lg-2"><div class="g-recaptcha" data-sitekey="6LcVnLQUAAAAAJKac-uOoll-YwHq6NFYtk8ldvmx"></div><br>
+	<div class="bds-col-lg-10"><input type="submit" name="submit">
 
 </form>
